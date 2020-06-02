@@ -25,5 +25,5 @@ Route::resource('films', 'FilmsController');
 Route::resource('categories', 'CategoriesController');
 Route::get('categorie/{laCategorie}/films', 'FilmsController@index')->name('films.categorie');
 
-Route::get('ajouterfilm', 'ajouterFilm@getInfos');
-Route::post('ajouterfilm', 'ajouterFilm@postInfos');
+Route::get('ajouterfilm', 'FilmsController@getInfos');
+Route::post('ajouterfilm', 'FilmsController@postInfos');

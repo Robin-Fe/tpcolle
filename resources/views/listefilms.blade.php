@@ -42,7 +42,7 @@
                         <th>Description</th>
                         <th>Catégorie</th>
                         <th></th>
-                        <th>en cours de développement ...</th>
+                        <th><a class="btn btn-warning" href="{{ route('films.create') }}">Ajouter un film</a></th>
                         <th></th>
                     </tr>
                     </thead>

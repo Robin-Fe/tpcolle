@@ -26,7 +26,7 @@ class FilmsController extends Controller
      */
     public function create()
     {
-        //
+        return view ('FormAjoutFilm');
     }
 
     /**
@@ -35,9 +35,10 @@ class FilmsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FilmRequest $filmRequest)
     {
-        //
+        Film::create($filmRequest->all());
+        return redirect()->route(films.index)->with('info', 'le film a été ajouté');
     }
 
     /**
@@ -60,7 +61,7 @@ class FilmsController extends Controller
      */
     public function edit(Film $film)
     {
-        return view('modifierFilm',compact('film'));
+        return view ('FormModifierFilm');
     }
 
     /**
@@ -72,8 +73,19 @@ class FilmsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return view('ajouterFilm');
     }
+
+    public function getInfos()
+    {
+        return view('ajouterFilm');
+    }
+
+    public function postInfos(Request $request, $id)
+    {
+        return view('ajouterFilm');
+    }
+
 
     /**
      * Remove the specified resource from storage.

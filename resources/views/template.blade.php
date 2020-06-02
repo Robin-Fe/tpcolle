@@ -35,7 +35,7 @@
                         Ajouter
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{url('/ajouterfilm')}}">Ajouter un film</a>
+                        <a class="dropdown-item" href="{{route('films.create')}}">Ajouter un film</a>
                         <a class="dropdown-item" href="{{url('/ajoutcategorie')}}">Ajouter une catégorie (Non implémenté par manque de temps)</a>
                     </div>
                 </li>
@@ -49,6 +49,7 @@
 </nav>
 <header>
     <h1>@yield('titreItem')</h1>
+    <h1>Je n'ai pas pu finir l'ajout de film et je n'ai pu commencer la modification</h1>
 </header>
 @yield('contenu')
 
